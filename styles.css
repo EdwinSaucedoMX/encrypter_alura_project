@@ -18,15 +18,25 @@ html{
     font-family: 'Chivo Mono', monospace !important;
 }
 
+body {
+    overflow-x: hidden;
+}
 .app{
     width: 100%;
-    height: fit-content;
+    height: 100%;
     display: flex;
     flex-flow: row wrap;
     align-content: center;
     justify-content: center;
     text-align: center;
-    transform: translate(0, 25%);
+}
+
+.title{
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 3rem 0;
+    padding: 2rem;
 }
 
 .form-flex {
@@ -99,12 +109,13 @@ html{
 }
 
 .content-message{
-    display: inline-block;
+    
     flex-flow: row wrap;
-    overflow-y: auto;
+    overflow: auto;
     width: 100%;
     height: 85%;
     overflow-wrap: break-word;
+    z-index: 3;
 }
 
 section{
@@ -112,7 +123,6 @@ section{
     display: flex;
     flex-flow: column nowrap;
     align-content: center;
-    height: 70%;
     justify-content: center;
     width: 45%;
 }
@@ -127,11 +137,11 @@ section main{
 }
 
 #main-title{
-    width: 18.05rem;
+    width: fit-content;
     height: 3rem;
     color: #fff;
     padding: 0;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
     animation: steps(10) 3s writing;
     overflow: hidden;
@@ -142,6 +152,13 @@ section main{
     border-left: 3px solid #fff;
     opacity: 0;
     animation: cubic-bezier(0.68, -0.55, 0.265, 1.55) .75s blinking 6;
+}
+
+.select-container{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
 }
 
 .copy{
@@ -163,20 +180,31 @@ section main{
     transform: scale(0.9);
 }
 
+.load-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+}
+
 .loading{
     background-image: url('./img/loading.png');
     background-repeat: no-repeat;
-    background-size: 15%;
+    background-size: 100%;
     filter: brightness(0.5);
     background-position: center;
-    width:100%;
-    overflow: hidden;
-    height: 92.3%;
-    position: absolute;
-    top: 2.25rem;
-    left: .75rem;
+    width:100px;
+    height: 100px; 
+ 
+    position: relative;
     animation: loading 2s infinite linear;
     display: none;
+    
 }
 
 .show{
@@ -185,7 +213,7 @@ section main{
 }
 
 .hide{
-    color: transparent;
+    content-visibility: hidden;
 }
 
 
@@ -194,7 +222,7 @@ section main{
         width: 0;
     }
     to {
-        width: 18.05rem;
+        width: 100%;
     }
 }
 

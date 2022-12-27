@@ -9,12 +9,15 @@
 </head>
 <body>
     <div class="app">
+        <h1 class="title">Welcome to Edwin Saucedo's Encrypter</h1>
         <section>
-            <main>
-                <h1 id="main-title">Encrypter.</h1>
-                <h3 id="typing"></h3>
-            </main>
             <form class="form-flex">
+                <main>
+                    <div class="text-container">
+                        <h1 id="main-title">Encrypter.</h1>
+                        <h3 id="typing"></h3>
+                    </div>
+                </main>
                 <h2 class="subtitle">Text something to encrypt/decrypt</h2>
                 <textarea class="input-text" placeholder="Write something..."></textarea>
                 <div class="select-container">
@@ -29,7 +32,9 @@
             <h2 class="subtitle">Result</h2>
             <div class="container-message">
                 <span class="content-message"></span>
-                <div class="loading"></div>
+                <div class="load-container">
+                    <div class="loading"></div>
+                </div>
                 <button class="copy">Copy</button>
             </div>
         </section>
