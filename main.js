@@ -11,6 +11,8 @@ input.addEventListener('keydown', function(e) {
     if(!isLoading) {
         loading.className+= ' show';
         btnCopy.className = 'copy';
+        contentBox.className += ' hide';
+
         isLoading = true;
     }
    
@@ -20,7 +22,7 @@ input.addEventListener('keydown', function(e) {
             btnCopy.className+= ' show';
             loading.className = 'loading';
             contentBox.className = 'content-message';
-            contentBox.textContent = input.value;
+            contentBox.innerHTML = `${input.value}`;
             console.log(input.value);
             isLoading = false;
             readInput = true;
