@@ -19,10 +19,11 @@ input.addEventListener('keydown', function(e) {
 
     if(readInput) {
         setTimeout(function() {
-            btnCopy.className+= ' show';
+            let {value} = input;
+            btnCopy.className = value ? btnCopy.className+= ' show' : btnCopy.className = 'copy';
             loading.className = 'loading';
             contentBox.className = 'content-message';
-            contentBox.innerHTML = `${input.value}`;
+            contentBox.innerHTML = `${value}`;
             console.log(input.value);
             isLoading = false;
             readInput = true;

@@ -16,6 +16,7 @@ html{
     box-sizing: border-box;
     margin: 0.75rem;
     font-family: 'Chivo Mono', monospace !important;
+    user-select: none;
 }
 
 body {
