@@ -19,11 +19,14 @@
                     </div>
                 </main>
                 <h2 class="subtitle">Text something to encrypt/decrypt</h2>
-                <textarea class="input-text" placeholder="Write something..."></textarea>
+                <div class="container">
+                    <div class="input-text" contenteditable="true"></div>
+
+                </div>
                 <div class="select-container">
-                    <input type="radio" id="encrypt" name="selection"value= 0 checked>
+                    <input type="radio" class="encrypt" name="selection"value= 0 checked>
                     <label for="encrypt">Encrypt</label>
-                    <input type="radio" id="encrypt" name="selection" value= 1>
+                    <input type="radio" class="encrypt" name="selection" value= 1>
                     <label for="encrypt">Decrypt</label>
                 </div>
             </form>

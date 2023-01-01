@@ -50,21 +50,26 @@ body {
     justify-content: space-evenly;
 }
 
-.form-flex > .input-text{
-    background-color: var(--secondary);
+.form-flex  .input-text{
+    display: block;
+    text-align: left;
     font-size: 1.25rem;
     width: 100%;
-    height: 30rem;
+    height: 85%;
     padding: 2rem;
     resize: none;
     border-radius: 1rem;
     border: none;
-    color: white;
+    overflow: auto;
+    z-index: 20000 !important;
 }
 
-.form-flex > .input-text:focus{
+.input-text:focus{
+    outline: none;    
+}
+
+.container:focus-within{
     outline: 3px solid var(--tertiary);
-    
 }
 
 .form-flex > .btn-form {
@@ -139,6 +144,9 @@ section main{
 
 #main-title{
     width: fit-content;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
     height: 3rem;
     color: #fff;
     padding: 0;
@@ -153,6 +161,18 @@ section main{
     border-left: 3px solid #fff;
     opacity: 0;
     animation: cubic-bezier(0.68, -0.55, 0.265, 1.55) .75s blinking 6;
+}
+
+.container{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin: 3rem 0;
+    height: 30rem;
+    background-color: var(--secondary);
+    color: white;
+    border-radius: 3rem;
+
 }
 
 .select-container{
@@ -217,6 +237,12 @@ section main{
     content-visibility: hidden;
 }
 
+.text-container{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+}
 
 @keyframes writing{
     from {
