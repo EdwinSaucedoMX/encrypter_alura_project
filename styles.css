@@ -108,7 +108,7 @@ body {
     margin: 0.75rem;
     box-shadow: #000 0px 2px 5px;
     padding: 2rem;
-    content-visibility: visible;
+    opacity: 1;
     text-align: left;
     text-size-adjust: 100%;
     vertical-align: auto;
@@ -230,12 +230,14 @@ section main{
 
 .show{
     display: block;
-    content-visibility: visible;
+    opacity: 1;
+    color: #fff;
 }
 
 .hide{
-    content-visibility: hidden;
-}
+    opacity: 1;
+    color: transparent;
+;}
 
 .text-container{
     display: flex;
